@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "groupdate"
-gem "rails", "~> 7.2.1"
+gem "rails", "~> 8.0.0"
 gem "devise"
 gem "sprockets-rails"
 gem "pg", "~> 1.1"
