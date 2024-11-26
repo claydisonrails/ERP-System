@@ -1,0 +1,40 @@
+<div class="dashboard">
+    <h1>Relatório de Clientes</h1>
+
+    <!-- Gráfico -->
+    <div class="chart-container">
+        <canvas id="clientesChart"></canvas>
+    </div>
+
+    <p>Total de clientes cadastrados no mês atual: <strong><%= @clientes_no_mes %></strong></p>
+</div>
+
+<script>
+    // Dados do gráfico (exemplo: 12 valores para os meses do ano)
+    const clientesData = <%= Cliente.group_by_month(:created_at, format: "%B", last: 12).count.values.to_json.html_safe %>;
+
+    // Labels para os meses
+    const meses = <%= Cliente.group_by_month(:created_at, format: "%B", last: 12).count.keys.to_json.html_safe %>;
+
+    const ctx = document.getElementById('clientesChart').getContext('2d');
+    const clientesChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: meses,
+            datasets: [{
+                label: 'Clientes cadastrados',
+                data: clientesData,
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

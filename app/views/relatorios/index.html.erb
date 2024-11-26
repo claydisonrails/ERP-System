@@ -1,0 +1,9 @@
+<h1>Relatório de Clientes</h1>
+<p>Total de Clientes: <%= @total_clientes %></p>
+
+<h2>Clientes Recentes</h2>
+<ul>
+  <% @clientes_recente.each do |cliente| %>
+    <li><%= cliente.nome %> - <%= cliente.created_at.strftime("%d/%m/%Y") %></li>
+  <% end %>
+</ul>

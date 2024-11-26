@@ -1,0 +1,123 @@
+/* Estilo Geral */
+* {
+    box-sizing: border-box; /* Define o modelo de box-sizing para todos os elementos */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    background-color: #E0F7FA; /* Fundo azul claro */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da tela */
+}
+
+/* Container de Login */
+.login-container {
+    background-color: #FFFFFF; /* Fundo do container de login */
+    color: #263238; /* Cor do texto */
+    padding: 40px; /* Espaço interno do container */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 400px; /* Largura do formulário */
+    text-align: center; /* Centraliza o texto */
+    transition: transform 0.3s; /* Transição suave para transformações */
+}
+
+.login-container:hover {
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+}
+
+/* Título */
+h2 {
+    margin-bottom: 25px; /* Espaço abaixo do título */
+    font-size: 24px; /* Tamanho do texto do título */
+    font-weight: bold; /* Negrito */
+    color: #4fbba1; /* Cor do título com a cor principal */
+}
+
+/* Grupos de Input */
+.input-group {
+    margin-bottom: 20px; /* Espaço entre os campos */
+}
+
+/* Labels */
+label {
+    display: block; /* Ocupar largura total */
+    margin-bottom: 5px; /* Espaço abaixo do label */
+    font-size: 14px; /* Tamanho do texto do label */
+    color: #263238; /* Cor do texto do label */
+}
+
+/* Estilo dos Campos de Entrada */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Largura total do campo */
+    padding: 12px; /* Espaço interno do campo */
+    border: 2px solid #4fbba1; /* Borda com a cor principal */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #F1F8E9; /* Fundo do campo */
+    color: #263238; /* Cor do texto no campo */
+    font-size: 16px; /* Tamanho do texto no campo */
+    transition: border-color 0.3s; /* Transição suave da borda */
+}
+
+/* Estilo ao Focar nos Campos de Entrada */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none; /* Remove a borda padrão do foco */
+    border-color: #43b890; /* Borda de foco mais escura */
+}
+
+/* Botões */
+.btn {
+    background-color: #4fbba1; /* Cor de fundo do botão */
+    color: #FFFFFF; /* Cor do texto do botão */
+    padding: 12px 20px; /* Espaço interno do botão */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    font-size: 16px; /* Tamanho do texto do botão */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+    margin-top: 10px; /* Espaço acima do botão */
+    width: 100%; /* Largura total do botão */
+}
+
+/* Botão de Login */
+.btn-login {
+    margin-top: 20px; /* Espaço acima do botão de login */
+}
+
+/* Botões de Ação Secundária */
+.btn-secondary {
+    background-color: transparent; /* Fundo transparente */
+    color: #4fbba1; /* Cor do texto dos botões secundários */
+    border: 2px solid #4fbba1; /* Borda com a cor principal */
+    padding: 10px; /* Espaço interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 100%; /* Largura total do botão */
+    margin-top: 10px; /* Espaço acima dos botões secundários */
+    font-size: 14px; /* Tamanho do texto */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+
+.btn-secondary:hover {
+    background-color: #4fbba1; /* Cor de fundo ao passar o mouse */
+    color: #FFFFFF; /* Cor do texto ao passar o mouse */
+}
+
+/* Mensagens de Erro */
+.message {
+    margin-top: 15px; /* Espaço acima da mensagem */
+    color: #ff0000; /* Cor da mensagem de erro */
+    font-size: 14px; /* Tamanho do texto da mensagem */
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%; /* Largura responsiva para telas pequenas */
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login - Welt ERP</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'login', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button class="btn btn-login" id="loginButton">Login</button>
+      <button class="btn btn-secondary" id="forgotPasswordButton">Esqueci a Senha</button>
+      <button class="btn btn-secondary" id="registerButton">Registrar</button>
+      <div class="message"><!-- Mensagens de erro aqui --></div>
+    </div>
+
+    <script src="<%= asset_path 'login.js' %>"></script> <!-- Inclua seu script JavaScript aqui -->
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= content_for(:title) || "Welt Erp" %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'dashboard', media: 'all' %>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="path/to/login.css"> <!-- Inclua o caminho para seu CSS -->
+</head>
+
+<body>
+    <nav class="left-menu">
+        <h1>Welt ERP</h1> <!-- Título do sistema -->
+        <ul>
+            <% if user_signed_in? %>
+                <li><%= link_to 'Sair', destroy_user_session_path, method: :delete, data: { turbo: false } %></li>
+            <% else %>
+                <li><%= link_to 'Login', new_user_session_path %></li>
+                <li><%= link_to 'Registrar', new_user_registration_path %></li>
+            <% end %>
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Clientes', clientes_path %></li>
+            <li><%= link_to 'Produtos', produtos_path %></li>
+            <li><%= link_to 'Pedidos', pedidos_path %></li>
+            <li><%= link_to 'Relatórios', relatorios_path %></li>
+            <li><%= link_to 'Relatório de Clientes', relatorios_clientes_dashboard_path %></li>
+        </ul>
+    </nav>
+
+    <header>
+        <!-- O título foi removido daqui para evitar duplicação -->
+    </header>
+
+    <main>
+        <div class="login-section">
+            <%= yield %>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <%= Time.now.year %> Weltmeister Technologies. Todos os direitos reservados.</p>
+        <a href="https://instagram.com/seu_instagram" target="_blank">Instagram</a> <!-- Link para o Instagram -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+<h1>Cliente: <%= @cliente.nome %></h1>
+
+<div>
+  <p><strong>Email:</strong> <%= @cliente.email %></p>
+  <p><strong>Telefone:</strong> <%= @cliente.telefone %></p>
+</div>
+
+<div>
+  <%= link_to "Edit this cliente", edit_cliente_path(@cliente) %> |
+  <%= link_to "Back to clientes", clientes_path %>
+  <%= button_to "Destroy this cliente", @cliente, method: :delete %>
+</div>
+

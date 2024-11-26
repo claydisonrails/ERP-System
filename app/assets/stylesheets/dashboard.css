@@ -1,0 +1,76 @@
+/* Adicione isso ao seu arquivo CSS */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    background-color: #f0f2f5; /* Fundo claro para o corpo */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+}
+
+.dashboard {
+    max-width: 900px; /* Largura máxima do dashboard */
+    margin: 40px auto; /* Centralizando o conteúdo com margem superior */
+    padding: 20px; /* Padding para dar espaço interno */
+    background-color: #fff; /* Fundo branco para destaque */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1 {
+    font-size: 2.5em; /* Tamanho do título principal */
+    margin-bottom: 10px; /* Espaçamento abaixo do título principal */
+    color: #333; /* Cor dos títulos */
+    text-align: center; /* Centralizando o título */
+}
+
+h2 {
+    font-size: 1.8em; /* Tamanho do título secundário */
+    margin-bottom: 20px; /* Espaçamento abaixo do título secundário */
+    color: #555; /* Cor mais suave para títulos secundários */
+    border-bottom: 2px solid #4e73df; /* Linha de separação */
+    padding-bottom: 10px; /* Padding para dar espaço */
+}
+
+.chart-container {
+    margin-top: 30px; /* Espaçamento acima do gráfico */
+    position: relative; /* Para o gráfico se posicionar corretamente */
+    height: 400px; /* Aumentando a altura do gráfico */
+    border-radius: 10px; /* Bordas arredondadas para o gráfico */
+    overflow: hidden; /* Oculta qualquer parte do gráfico que exceda as bordas */
+    background: linear-gradient(180deg, rgba(78, 115, 223, 0.1) 0%, rgba(78, 115, 223, 0.05) 100%); /* Gradiente de fundo */
+    border: 1px solid #4e73df; /* Borda ao redor do gráfico */
+}
+
+canvas {
+    width: 100% !important; /* Fazendo o canvas ocupar toda a largura */
+    height: 100% !important; /* Fazendo o canvas ocupar toda a altura */
+}
+
+.total-clientes {
+    font-size: 1.5em; /* Tamanho do texto total de clientes */
+    margin-top: 20px; /* Espaçamento acima do texto total de clientes */
+    color: #4e73df; /* Cor para destacar o total de clientes */
+    text-align: center; /* Centralizando o texto */
+}
+
+.footer {
+    margin-top: 40px; /* Margem superior para o rodapé */
+    text-align: center; /* Centralizando o rodapé */
+    color: #777; /* Cor mais suave para o texto do rodapé */
+}
+
+/* Botões estilizados */
+.button {
+    background-color: #4e73df; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor pointer ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave ao mudar de cor */
+    text-decoration: none; /* Sem sublinhado em links */
+}
+
+.button:hover {
+    background-color: #3e5cb3; /* Cor do botão ao passar o mouse */
+}
